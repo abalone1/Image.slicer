@@ -10,14 +10,15 @@ Slice images/labels with overlapping and in different scales
 # Example
 ```python
 
-from exp.nb_Image import *
+from notebook.exp.nb_Image import *
 
-inp_d = Path("/Users/Abalone/Desktop/Test_vahingen/Vaihingen")
-resize = 448 # Output size for the sliced Image
+inp_d = Path("/Users/Abalone/Desktop/Vaihingen") 
+# Directory where the Raw Images are stored
+resize = 448 # Output size for the sliced Images
 slice_range = [500, 900] # List of slice sizes in pixel
 overlap = 7 # Ratio of overlapping (here 1:7)
 dir_name = f'test4_{resize}_{overlap}_{slice_range[0]}-{slice_range[1]}' 
-#Suggested directory name to save the outputs in
+#Directory name to save the outputs in 
 
 # Dictionary to convert rgb masks to greyscale
 palette = {0 : (255, 255, 255), # Impervious surfaces (white)
@@ -28,8 +29,9 @@ palette = {0 : (255, 255, 255), # Impervious surfaces (white)
            5 : (255, 0, 0),     # Clutter (red)
            6 : (0, 0, 0)}       # Undefined (black)
 
-# Generate quantiles from slice_range
+# Generate quantiles from slice_range (0% , 25% , 50% , 75% , 100%)
 slice_l = ImageSlicer.quantile_from_slice_range(slice_range)
+slice_l = [500 , 600 , 700, 800 , 900]
 
 # Showing slices in Notebook
 ImageSlicer.show_slices(slice_l, inp_d)
@@ -46,7 +48,7 @@ ImageSlicer.slice_images(inp_d= inp_d, dir_name = dir_name, slice_l = slice_l ,
 ```python
 
 # For label data
-inp_d_label = Path("/Users/Abalone/Desktop/Test_vahingen/vaihingen_mask")
+inp_d_label = Path("/Users/Abalone//Test_vahingen/vaihingen_mask")
 ImageSlicer.slice_masks(inp_d= inp_d2, dir_name = dir_name, slice_l = slice_l ,
                        resize= resize , overlap = overlap , palette = palette)
                        

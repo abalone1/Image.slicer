@@ -10,6 +10,8 @@ Slice images/label with overlapping and in different scales
 # Example
 ```python
 
+from exp.nb_Image import *
+
 inp_d = Path("/Users/Abalone/Desktop/Test_vahingen/Vaihingen")
 resize = 448 # Output size for the sliced Image
 slice_range = [500, 900] # List of slice sizes in Pixel

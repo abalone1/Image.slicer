@@ -53,7 +53,7 @@ ImageSlicer.slice_masks(inp_d= inp_d2, dir_name = dir_name, slice_l = slice_l ,
 ```
 <img src="https://github.com/abalone1/Image_slicer_remote/blob/master/pic/Mask_slicer.png" width="700">
 
-#### Parameters 
+#### Parameter
 
 **inp_d** - Path("PATH TO IMAGE DIRECTORY") <br />
 **dir_name** - Name of the directory where the files should be stored <br />
@@ -66,12 +66,11 @@ ImageSlicer.slice_masks(inp_d= inp_d2, dir_name = dir_name, slice_l = slice_l ,
 #### optional
 **out_path** - Path to output directory <br />
 **palette** -  Dictionary to convert rgb masks to greyscale <br />
-**slice_l** -  ImageSlicer.quantile_from_slice_range generates quantile from **'slice_range'** <br />
+**slice_l** -  *ImageSlicer.quantile_from_slice_range* generates quantile from **'slice_range'** <br />
 
 ## Why this tool?
 
 -  Training of high-resolution images is costly. Slicing can reduce costs. Padding and overlap can help to decrease the loss of information at the borders of the sliced tiles.
--  The use of different scales can probably make the model more robust for production
--  The generation of hand-crafted masked is very time consuming. This tool can help to decrease overfitting while training.
+-  The use of different scales increases training data and can probably make the model more robust in production
 
 This is a alterd version from [AnmolChachra/Image_slice]( https://github.com/AnmolChachra/Image-Slicer)

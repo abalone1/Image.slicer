@@ -1,10 +1,10 @@
 # Image.slicer
-Slice images/label with overlapping and in different scales
+Slice images/labels with overlapping and in different scales
 
 ### Feature
 - Preprocess of high resolution imagery and label data for use in Semantic Segmentation tasks (Deep Learning)
-- Increases amount of trainingdata by generating different scales and overlapping for images and labels
-- Multi stage resizing 
+- Increases amount of trainingdata by generating different scales and overlappings for images and labels
+- Multi stage interpolation 
 - Easy to organize
 
 # Example
@@ -14,8 +14,8 @@ from exp.nb_Image import *
 
 inp_d = Path("/Users/Abalone/Desktop/Test_vahingen/Vaihingen")
 resize = 448 # Output size for the sliced Image
-slice_range = [500, 900] # List of slice sizes in Pixel
-overlap = 7 # Ratio of overlapping here 1:7 
+slice_range = [500, 900] # List of slice sizes in pixel
+overlap = 7 # Ratio of overlapping (here 1:7)
 dir_name = f'test4_{resize}_{overlap}_{slice_range[0]}-{slice_range[1]}' 
 #Suggested directory name to save the outputs in
 
@@ -28,7 +28,7 @@ palette = {0 : (255, 255, 255), # Impervious surfaces (white)
            5 : (255, 0, 0),     # Clutter (red)
            6 : (0, 0, 0)}       # Undefined (black)
 
-# Generate quantile from slice_range
+# Generate quantiles from slice_range
 slice_l = ImageSlicer.quantile_from_slice_range(slice_range)
 
 # Showing slices in Notebook
@@ -47,7 +47,7 @@ ImageSlicer.slice_images(inp_d= inp_d, dir_name = dir_name, slice_l = slice_l ,
 
 # For label data
 inp_d_label = Path("/Users/Abalone/Desktop/Test_vahingen/vaihingen_mask")
-IImageSlicer.slice_maks(inp_d= inp_d2, dir_name = dir_name, slice_l = slice_l ,
+ImageSlicer.slice_masks(inp_d= inp_d2, dir_name = dir_name, slice_l = slice_l ,
                        resize= resize , overlap = overlap , palette = palette)
                        
 ```

@@ -13,9 +13,13 @@ Slice images/labels with overlapping and in different scales
 from exp.nb_Image import *
 
 inp_d = Path("/Users/Abalone/Desktop/Test_vahingen/Vaihingen")
+
 resize = 448 # Output size for the sliced Image
+
 slice_range = [500, 900] # List of slice sizes in pixel
+
 overlap = 7 # Ratio of overlapping (here 1:7)
+
 dir_name = f'test4_{resize}_{overlap}_{slice_range[0]}-{slice_range[1]}' 
 #Suggested directory name to save the outputs in
 

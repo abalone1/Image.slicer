@@ -5,7 +5,7 @@ Slice images/labels with overlapping and in different scales
 - Preprocess of high resolution imagery and label data for use in Semantic Segmentation tasks (Deep Learning)
 - Increases amount of trainingdata by generating different scales and overlappings for images and labels
 - Multi stage interpolation 
-- Easy to organize
+- Easy to use and organize
 
 # Example
 ```python

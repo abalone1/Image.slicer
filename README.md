@@ -67,7 +67,7 @@ ImageSlicer.slice_masks(inp_d= inp_d2, dir_name = dir_name, slice_l = slice_l ,
 **slice_range** - # In pixel: List of slice sizes <br />
 **overlap** - How much Overlap (ratio) 1:? on each side? <br />
 
-<img src="https://github.com/abalone1/Image_slicer_remote/blob/master/pic/overlap.png" width="500">
+<img src="https://github.com/abalone1/Image_slicer_remote/blob/master/pic/Overlap.png" width="500">
 
 #### optional
 **out_path** - Path to output directory <br />

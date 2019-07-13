@@ -38,14 +38,14 @@ slice_l = [500 , 600 , 700, 800 , 900]
 # Showing slices in Notebook
 ImageSlicer.show_slices(slice_l, inp_d)
 ```
-<img src="https://github.com/abalone1/Image_slicer_remote/blob/master/pic/show_slices.png" width="400">
+<img src="https://github.com/abalone1/Image.slicer/blob/master/pic/show_slices.png" width="400">
 
 ```python
 # For Image data
 ImageSlicer.slice_images(inp_d= inp_d, dir_name = dir_name, slice_l = slice_l ,
                          resize=resize, overlap = overlap)        
 ```
-<img src="https://github.com/abalone1/Image_slicer_remote/blob/master/pic/Image_slicer.png" width="600">
+<img src="https://github.com/abalone1/Image.slicer/blob/master/pic/Image_slicer.png" width="600">
 
 ```python
 
@@ -55,7 +55,7 @@ ImageSlicer.slice_masks(inp_d= inp_d2, dir_name = dir_name, slice_l = slice_l ,
                        resize= resize , overlap = overlap , palette = palette)
                        
 ```
-<img src="https://github.com/abalone1/Image_slicer_remote/blob/master/pic/Mask_slicer.png" width="700">
+<img src="https://github.com/abalone1/Image.slicer/blob/master/pic/Mask_slicer.png" width="700">
 
 #### Parameter
 

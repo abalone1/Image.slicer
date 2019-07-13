@@ -5,12 +5,13 @@ Slice images/labels with overlapping and in different scales
 - Preprocess of high resolution imagery and label data for use in Semantic Segmentation tasks (Deep Learning)
 - Increases amount of trainingdata by generating different scales and overlappings for images and labels
 - Multi stage interpolation 
+- More than have empty Images/labels will be ignored
 - Easy to use and organize
 
 # Example
 ```python
 
-from notebook.exp.nb_Image import *
+from notebook.exp.Image_Slicer import *
 
 inp_d = Path("/Users/Abalone/Desktop/Vaihingen") 
 # Directory where the Raw Images are stored

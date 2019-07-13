@@ -9,7 +9,7 @@ Slice images/labels with overlapping and in different scales
 - More than half empty slices will be ignored / It´s possilbe to slice a dismembered Mosaik!
 - Easy to use 
 - Status callbacks
-- Easy to organize 
+- Easy to organize files
 
 # Example
 ```python

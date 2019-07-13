@@ -69,6 +69,7 @@ ImageSlicer.slice_masks(inp_d= inp_d2, dir_name = dir_name, slice_l = slice_l ,
 <p align="center">
 <img src="https://github.com/abalone1/Image.slicer/blob/master/pic/Overlap2.png" width="700">
 </p>
+
 #### optional
 **out_path** - Path to output directory <br />
 **palette** -  Dictionary to convert rgb masks to greyscale <br />

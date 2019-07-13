@@ -4,7 +4,8 @@ Slice images/labels with overlapping and in different scales
 ### Feature
 - Preprocess of high resolution imagery and label data for use in Semantic Segmentation tasks (Deep Learning)
 - Increases amount of trainingdata by generating different scales and overlappings for images and labels
-- Multi stage interpolation (Nearest Neighbor + Bicubic combined) 
+- Multi stage interpolation (Nearest Neighbor + Bicubic combined) for image data 
+- Nearest Neighbor interpolation for mask data
 - More than half empty slices will be ignored / It´s possilbe to slice a dismembered Mosaik!
 - Easy to use 
 - Status callbacks

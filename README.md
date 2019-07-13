@@ -7,9 +7,6 @@ Slice images/labels with overlapping and in different scales
 - Multi stage interpolation (Nearest Neighbor + Bicubic combined) for image data 
 - Nearest Neighbor interpolation for mask data
 - More than half empty slices will be ignored / It´s possilbe to slice a dismembered Mosaik!
-- Easy to use 
-- Status callbacks
-- Easy to organize files
 
 # Example
 ```python

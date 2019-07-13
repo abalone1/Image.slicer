@@ -62,7 +62,7 @@ ImageSlicer.slice_masks(inp_d= inp_d2, dir_name = dir_name, slice_l = slice_l ,
 #### Parameter
 
 **inp_d** - Path("PATH TO IMAGE DIRECTORY") <br />
-**dir_name** - Name of the directory where the files should be stored <br />
+**dir_name** - Name of the directory where the images or labels are stored <br />
 **resize** - In pixel: What should be the dimension of the sliced Images? <br />
 **slice_range** - # In pixel: List of slice sizes <br />
 **overlap** - How much Overlap (ratio) 1:? on each side? <br />
@@ -75,9 +75,5 @@ ImageSlicer.slice_masks(inp_d= inp_d2, dir_name = dir_name, slice_l = slice_l ,
 **palette** -  Dictionary to convert rgb masks to greyscale <br />
 **slice_l** -  *ImageSlicer.quantile_from_slice_range* generates quantile from **'slice_range'** <br />
 
-## Why this tool?
-
--  Training of high-resolution images is costly. Slicing can reduce costs. Padding and overlap can help to decrease the loss of information at the borders of the sliced tiles.
--  The use of different scales increases training data and can probably make the model more robust in production
 
 This is a alterd version from [AnmolChachra/Image_slice]( https://github.com/AnmolChachra/Image-Slicer)

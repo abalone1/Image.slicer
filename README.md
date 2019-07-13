@@ -19,6 +19,7 @@ resize = 448 # Output size for the sliced Images
 slice_range = [500, 900] # List of slice sizes in pixel
 overlap = 7 # Ratio of overlapping (here 1:7)
 dir_name = f'test4_{resize}_{overlap}_{slice_range[0]}-{slice_range[1]}' 
+#dir_name = test4_448_7_500-900
 #Directory name to save the outputs in 
 
 # Dictionary to convert rgb masks to greyscale

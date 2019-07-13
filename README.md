@@ -17,7 +17,7 @@ inp_d = Path("/Users/Abalone/Desktop/Vaihingen")
 # Directory where the Raw Images are stored
 resize = 448 # Output size for the sliced Images
 slice_range = [500, 900] # List of slice sizes in pixel
-overlap = 7 # Ratio of overlapping (here 1:7)
+overlap = 7 # Ratio of overlapping (here 1:7 see image below)
 dir_name = f'test4_{resize}_{overlap}_{slice_range[0]}-{slice_range[1]}' 
 #dir_name = test4_448_7_500-900
 #Directory name to save the outputs in 

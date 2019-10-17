@@ -71,6 +71,8 @@ ImageSlicer.slice_masks(inp_d= inp_d2, dir_name = dir_name, slice_l = slice_l ,
 **resize** - In pixel: What should be the dimension of the sliced Images? <br />
 **slice_range** - # In pixel: List of slice sizes <br />
 **overlap** - How much Overlap (ratio) 1:? on each side? <br />
+**pad** - How much Padding you want to add to your high resolution Images
+
 <p align="center">
 <img src="https://github.com/abalone1/Image.slicer/blob/master/pic/Overlap2.png" width="700">
 </p>
@@ -79,6 +81,8 @@ ImageSlicer.slice_masks(inp_d= inp_d2, dir_name = dir_name, slice_l = slice_l ,
 **out_path** - Path to output directory <br />
 **palette** -  Dictionary to convert rgb masks to greyscale <br />
 **slice_l** -  *ImageSlicer.quantile_from_slice_range* generates quantile from **'slice_range'** <br />
+**half_empty** - If set to True: more than half empty slices will be ignored from the algorithm. If set to False slicers will be not ignored <br />
+
 
 ## Predict and merge
 

@@ -101,7 +101,7 @@ f_score1 = partial(fbeta , beta=1)
 # Path to exported fastai model
 path_model  = Path('D:/david/va_po/im_train/va_5-9_po__9-13_448')
 
-# Type in the amount of rows and columns to rearrange
+# Type in the amount of rows and columns to rearrange the image
 rows, columns = 7,7
 
 ImageSlicer.predict_from_fastai_model(path_fastai_model= path_model,inp_d= inp_d, dir_name=dir_name, 

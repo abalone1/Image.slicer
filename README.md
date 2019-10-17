@@ -1,5 +1,6 @@
 # Image.slicer
 Slice images/labels with overlapping and in different scales
+Predict (with fastai) and merge the sliced images to full size
 
 ### Feature
 - Preprocess of high resolution imagery and label data for use in Semantic Segmentation tasks (Deep Learning)
@@ -7,6 +8,8 @@ Slice images/labels with overlapping and in different scales
 - Multi stage interpolation (Nearest Neighbor + Bicubic combined) for image data 
 - Nearest Neighbor interpolation for label data
 - More than half empty slices will be ignored / It´s possilbe to slice a dismembered Mosaik!
+- Add Padding (to the right and bottom) to your high resolution images
+- Do Fastai predictions and merge the images to full size
 
 # Example
 ```python
@@ -73,5 +76,26 @@ ImageSlicer.slice_masks(inp_d= inp_d2, dir_name = dir_name, slice_l = slice_l ,
 **palette** -  Dictionary to convert rgb masks to greyscale <br />
 **slice_l** -  *ImageSlicer.quantile_from_slice_range* generates quantile from **'slice_range'** <br />
 
+## Predict and merge
 
+```python
+from fastai.vision import *
+from PIL import Image
+
+def acc_isprs(input, target):
+    target = target.squeeze(1)
+    mask = target != void_code 
+    return (input.argmax(dim=1)[mask]==target[mask]).float().mean()
+
+metrics = acc_isprs
+f_score1 = partial(fbeta , beta=1)
+
+path_model  = Path('D:/david/va_po/im_train/va_5-9_po__9-13_448')
+
+inp_d = Path("D:/david/Test_data/test7/out_padded/po_448_0_1100-1100")
+
+rows, columns = 7,7
+
+ImageSlicer.predict_from_fastai_model(path_fastai_model= path_model,inp_d= inp_d, dir_name=dir_name, palette= palette , rows= rows, columns= columns )
+```
 This is a alterd version from [AnmolChachra/Image_slice]( https://github.com/AnmolChachra/Image-Slicer)

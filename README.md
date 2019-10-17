@@ -66,7 +66,7 @@ ImageSlicer.slice_masks(inp_d= inp_d2, dir_name = dir_name, slice_l = slice_l ,
 
 #### Parameter
 
-**inp_d** - Path("PATH TO IMAGE DIRECTORY") <br />
+**inp_d** - Path("Path to image directory") <br />
 **dir_name** - Name of the directory where the images or labels are stored <br />
 **resize** - In pixel: What should be the dimension of the sliced Images? <br />
 **slice_range** - # In pixel: List of slice sizes <br />

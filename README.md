@@ -81,7 +81,7 @@ ImageSlicer.slice_masks(inp_d= inp_d2, dir_name = dir_name, slice_l = slice_l ,
 **out_path** - Path to output directory <br />
 **palette** -  Dictionary to convert rgb masks to greyscale <br />
 **slice_l** -  *ImageSlicer.quantile_from_slice_range* generates quantile from **'slice_range'** <br />
-**half_empty** - If set to **True**: More than half empty slices will be ignored from the algorithm. <br />If set to **False**: Slicers will be not ignored <br />
+**half_empty** - If set to **True**: More than half empty slices will be ignored from the algorithm. <br />If set to **False**: No slicers will be ignored <br />
 
 
 ## Predict and merge

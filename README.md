@@ -96,6 +96,7 @@ inp_d = Path("D:/david/Test_data/test7/out_padded/po_448_0_1100-1100")
 
 rows, columns = 7,7
 
-ImageSlicer.predict_from_fastai_model(path_fastai_model= path_model,inp_d= inp_d, dir_name=dir_name, palette= palette , rows= rows, columns= columns )
+ImageSlicer.predict_from_fastai_model(path_fastai_model= path_model,inp_d= inp_d, dir_name=dir_name, 
+palette= palette , rows= rows, columns= columns )
 ```
 This is a alterd version from [AnmolChachra/Image_slice]( https://github.com/AnmolChachra/Image-Slicer)

@@ -1,5 +1,5 @@
 # Image.slicer
-Slice images/labels with overlapping and in different scales
+Slice images/labels with overlapping and in different scales  
 Predict (with fastai) and merge the sliced images to full size
 
 ### Feature

@@ -90,7 +90,7 @@ ImageSlicer.slice_masks(inp_d= inp_d2, dir_name = dir_name, slice_l = slice_l ,
 from fastai.vision import *
 from PIL import Image
 
-# Define individuell metrics
+# Define individuell metrics from exported fastai model
 def acc_isprs(input, target):
     target = target.squeeze(1)
     mask = target != void_code 

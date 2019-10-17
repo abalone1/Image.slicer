@@ -8,8 +8,8 @@ Predict (with fastai) and merge the sliced images to full size
 - Multi stage interpolation (Nearest Neighbor + Bicubic combined) for image data 
 - Nearest Neighbor interpolation for label data
 - More than half empty slices will be ignored / It´s possilbe to slice a dismembered Mosaik!
-- Add Padding (to the right and bottom) to your high resolution images
-- Do Fastai predictions and merge the images to full size
+- Add padding (to the right and bottom) to your high resolution images
+- Do fastai predictions and merge the images to full size
 
 # Example
 ```python

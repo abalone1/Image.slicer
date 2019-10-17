@@ -44,6 +44,10 @@ ImageSlicer.show_slices(slice_l, inp_d)
 <img src="https://github.com/abalone1/Image.slicer/blob/master/pic/show_slices.png" width="400">
 
 ```python
+# Add Padding
+pad = 900 # In Pixel (added to the right and bottom)
+ImageSlicer.add_padding(inp_d, pad = pad)
+
 # For Image data
 ImageSlicer.slice_images(inp_d= inp_d, dir_name = dir_name, slice_l = slice_l ,
                          resize=resize, overlap = overlap)        
@@ -82,14 +86,15 @@ ImageSlicer.slice_masks(inp_d= inp_d2, dir_name = dir_name, slice_l = slice_l ,
 from fastai.vision import *
 from PIL import Image
 
+# Define individuell metrics
 def acc_isprs(input, target):
     target = target.squeeze(1)
     mask = target != void_code 
     return (input.argmax(dim=1)[mask]==target[mask]).float().mean()
-
 metrics = acc_isprs
 f_score1 = partial(fbeta , beta=1)
 
+# Path to exported fastai model
 path_model  = Path('D:/david/va_po/im_train/va_5-9_po__9-13_448')
 
 inp_d = Path("D:/david/Test_data/test7/out_padded/po_448_0_1100-1100")

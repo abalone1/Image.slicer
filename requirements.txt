@@ -1,4 +1,4 @@
-Pillow==6.0.0
+Pillow==6.2.0
 scikit-image==0.15.0
 numpy
 matplotlib
